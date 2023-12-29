@@ -24,6 +24,10 @@ function(cpp_ray_tracer_setup_dependencies)
       "SPDLOG_FMT_EXTERNAL ON")
   endif()
 
+  if(NOT TARGET SDL2::SDL2)
+    cpmaddpackage("gh:libsdl-org/SDL@2.28.5#release-2.28.5")
+  endif()
+
   if(NOT TARGET Catch2::Catch2WithMain)
     cpmaddpackage("gh:catchorg/Catch2@3.3.2")
   endif()

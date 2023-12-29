@@ -6,7 +6,6 @@ add_library(cpp_ray_tracer_CApp CApp.cpp)
 
 add_library(cpp_ray_tracer::CApp ALIAS cpp_ray_tracer_CApp)
 
-find_package(SDL2 REQUIRED)
 target_link_libraries(cpp_ray_tracer_CApp PRIVATE cpp_ray_tracer_options cpp_ray_tracer_warnings SDL2::SDL2)
 
 target_include_directories(cpp_ray_tracer_CApp  ${WARNING_GUARD} PUBLIC $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
